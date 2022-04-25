@@ -1,5 +1,3 @@
 #!/usr/bin/python3
 str = 'Holberton School'
-print('Holberton School', end = "")
-print('Holberton School', end = "")
-print('Holberton School\n' + str[0:9])
+print(str * 3 + str[0:9])
