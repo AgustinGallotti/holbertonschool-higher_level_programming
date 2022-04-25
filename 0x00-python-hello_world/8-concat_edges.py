@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
-str[107:111].replace('\n', "") 
+str[107:111].replace("\n", '') 
 print(str[39:67] + str[107:111] + ' ' + str[0:6])
