@@ -6,7 +6,7 @@
 * test - test for check the node
 * @nextnode: node next
 * @nextnext: second next
-* Return: yes or not
+* Return: 1 or 0
 */
 int check_cycle(listint_t *list)
 {
