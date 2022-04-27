@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-return (add(a + b))
-return (add(a - b))
+if a < 100 and b < 100:
+    return (add(a + b))
