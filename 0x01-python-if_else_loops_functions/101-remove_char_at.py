@@ -1,6 +1,7 @@
 #!/usr/ibin/python3
 def remove_char_at(str, n):
+    cpy = ""
     for i in range(len(str)):
         if i != n:
-            cop = "" + str
-    return(cop)
+            cpy += str[i]
+    return(cpy)
