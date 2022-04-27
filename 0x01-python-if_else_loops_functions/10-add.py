@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-return a + b
+return (add(a + b))
