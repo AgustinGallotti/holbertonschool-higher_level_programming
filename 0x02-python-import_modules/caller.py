@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for alpha in range(65, 91):
-    print(chr(alpha), end="")
+for i in range(65, 91):
+    print(chr(i), end="")
 print("")
