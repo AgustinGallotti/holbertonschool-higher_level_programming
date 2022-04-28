@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-indice = 0 #set in zero
-numbers = [1, 2, 3, 4, 5, 6]
-args = ["Hello", "Welcome", "To", "The", "Best", "School"]
-#funcion len() devuelve la longitu de la lista
-indice = input()
-while indice < len(numbers): #loop using len
-    print(numbers[indice], args[indice])
-    indice += 1
-print(f"{indice}{numbers}, arguments:")
+import sys
+if __name__ == "__name__"
+    arguments = len(sys.argv) - 1
+    itinerate = 1
+
+    if arguments == 0:
+        print(f"{arguments} arguments.")
+    elif arguments == 1:
+        prin(f"{arguments} arguments:")
+    else:
+        print(f"{arguments} arguments:")
+
+    while (arguments >= itinerate):
+        print(f"{itinerate}: {sys.argv[itinerate]}")
+        itinerate += 1
