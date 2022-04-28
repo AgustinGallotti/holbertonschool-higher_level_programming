@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if arguments == 0:
         print(f"{arguments}: arguments.")
     elif arguments == 1:
-        prin(f"{arguments}: arguments:")
+        print(f"{arguments}: arguments:")
     else:
         print(f"{arguments}: arguments:")
 
