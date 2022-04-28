@@ -1,13 +1,34 @@
 #!/usr/bin/python3
-def add(a, b):
-    #first adding
-    sum = a + b
-    return sum
+import add_0 as add
+a = 1
+b = 2
 
-a = 10
-b = 5
-print("10 + 5 =", add(a, b))
+result = add.add(a, b)
+print("{} + {} = {}".format(a, b, result))
+#sub
+#
+#!/usr/bin/python3
+import add_0 as add
+a = 1
+b = 2
 
-def sub(a, b):
-    #second adding
-    
+result = add.add(a, b)
+print("{} - {} = {}".format(a, b, result))
+#div
+#
+#!/usr/bin/python3
+import add_0 as add
+a = 1
+b = 2
+
+result = add.add(a, b)
+print("{} / {} = {}".format(a, b, result))
+#mult
+#
+#!/usr/bin/python3
+import add_0 as add
+a = 1
+b = 2
+
+result = add.add(a, b)
+print("{} * {} = {}".format(a, b, result))
