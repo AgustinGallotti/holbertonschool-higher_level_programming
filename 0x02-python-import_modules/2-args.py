@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import sys
-if __name__ == "__name__"
+if __name__ == "__main__":
+    import sys
     arguments = len(sys.argv) - 1
     itinerate = 1
 
     if arguments == 0:
-        print(f"{arguments} arguments.")
+        print(f"{argument} {itinerate} arguments.")
     elif arguments == 1:
         prin(f"{arguments} arguments:")
     else:
