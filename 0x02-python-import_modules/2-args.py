@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     import sys
     arguments = len(sys.argv) - 1
-    itinerate = 1
+    itinerate = 0
 
     if arguments == 0:
         print(f"{argument} {itinerate} arguments.")
