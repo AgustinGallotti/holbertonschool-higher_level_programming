@@ -5,11 +5,11 @@ if __name__ == "__main__":
     itinerate = 1
 
     if arguments == 0:
-        print(f"{argument} {itinerate} arguments.")
+        print(f"{argument}: {sys.argv[itinerate]} arguments.")
     elif arguments == 1:
-        prin(f"{arguments} {itinerate} arguments:")
+        prin(f"{arguments}: {sys.argv[itinerate]}arguments:")
     else:
-        print(f"{arguments} {itinerate} arguments:")
+        print(f"{arguments}: {sys.argv[itinerate]}arguments:")
 
     while (arguments >= itinerate):
         print(f"{itinerate}: {sys.argv[itinerate]}")
