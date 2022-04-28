@@ -2,14 +2,14 @@
 if __name__ == "__main__":
     import sys
     arguments = len(sys.argv) - 1
-    itinerate = 0
+    itinerate = 1
 
     if arguments == 0:
         print(f"{argument} {itinerate} arguments.")
     elif arguments == 1:
-        prin(f"{arguments} arguments:")
+        prin(f"{arguments} {itinerate} arguments:")
     else:
-        print(f"{arguments} arguments:")
+        print(f"{arguments} {itinerate} arguments:")
 
     while (arguments >= itinerate):
         print(f"{itinerate}: {sys.argv[itinerate]}")
