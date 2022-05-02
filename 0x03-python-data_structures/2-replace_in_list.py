@@ -6,7 +6,7 @@ def replace_in_list(my_list, idx, element):
         return (my_list)
     else:
         for idx, element in enumerate(my_list):
-            if element == my_list[]:
+            if element == my_list[idx]:
                 my_list[idx] = my_list[]
 
         return (my_list)
