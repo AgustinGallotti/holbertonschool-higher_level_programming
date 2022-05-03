@@ -10,7 +10,7 @@
 */
 int is_palindrome(listint_t **head)
 {
-	listint_t *current;
+	listint_t *current = *head;
 	unsigned int size = 0, i = 0, data[2048];
 
 	if (head == NULL)
