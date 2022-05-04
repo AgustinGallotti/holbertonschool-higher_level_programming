@@ -6,20 +6,19 @@
 #include <limits.h>
 #include <assert.h>
 #include <stdlib.h>
+
 /**
-* print_python_list_info - info for the list
-* @p: pyobject
-* void: none
+*print_python_list_info - C function that prints some
+*basic info about Python lists
+*@p: pyobject
 */
 void print_python_list_info(PyObject *p)
 {
 	int idx = 0;
 	PyObject *iter;
-
 	Py_ssize_t out = PyList_Size(p);
 	printf("[*] Size of the Python List = %d\n", (int)out);
-	printf("[*] Allocted = %d\n", (int)((PyListObject *)p)->allocated);
-	
+	printf("[*] Allocated = %d\n", (int)((PyListObject *)p)->allocated);
 	while (idx < out)
 	{
 		iter = PyList_GetItem(p, idx);
