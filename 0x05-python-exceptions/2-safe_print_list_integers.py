@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-def saf_print_list_integers(my_list=[], x=0):
-    try:
-        for x in my_list:
-            print(x, end="")
-    except:
-        
-
-
+def safe_print_list_integers(my_list=[], x=0):
+    cn = 0
+    for i in range(x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            cn += 1
+        except (TypeError, ValueError):
+            pass
+    print()
+    return cn
