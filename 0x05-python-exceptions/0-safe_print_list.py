@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    try:
-        my_list = []
-
-        print(my_list[])
-
-    except (IndexError, NameError)
-
-    except IndexError:
-        print("Sorry that index doesn't exist")
-
-    except:
-        print("An unknoen error ocurred")
+    cn = 0
+    for item in (my_list):
+        try:
+            print(item, end="")
+            cn += 1
+        except IndexError:
+            print("Out of Range")
+        except:
+            print("An unknow error ocurred")
+    print("")
+    return (cn)
