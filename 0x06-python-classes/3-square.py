@@ -14,5 +14,5 @@ class Square:
     """ defien other module """
     def area(self):
         """define my function in only one line, without self"""
-        return self.__size ** 2
+        return (self.__size ** 2)
         """return my function in pow of two"""
