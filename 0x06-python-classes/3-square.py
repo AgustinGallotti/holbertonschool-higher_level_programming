@@ -12,7 +12,7 @@ class Square:
         else:
             """finally realize my task"""
             self.__size = size
-    """ defien other module """
+
     def area(self):
         """define my function in only one line, without self"""
         return (self.__size ** 2)
