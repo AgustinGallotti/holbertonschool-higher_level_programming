@@ -2,6 +2,7 @@
 """define my class of Square"""
 
 
+
 class Square:
     __size = None #private class of my size
     def __init__(self, size=0): #new class
