@@ -10,7 +10,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             """finally realize my task"""
-            self.__size=size
+            self.__size = size
     """ defien other module """
     def area(self):
         """define my function in only one line, without self"""
