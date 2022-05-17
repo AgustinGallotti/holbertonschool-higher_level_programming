@@ -4,8 +4,8 @@
 
 
 class Square:
-    __size = None #private class of my size
-    def __init__(self, size=0): #new class
+    __size = None
+    def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
