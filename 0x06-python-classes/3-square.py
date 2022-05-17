@@ -2,6 +2,7 @@
 """define my class"""
 
 
+"""define my class"""
 class Square:
     __size = None
     """my instance of size"""
