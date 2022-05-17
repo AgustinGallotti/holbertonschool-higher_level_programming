@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""define my class"""
+
+
 class Square:
     __size = None
     def __init__(self, size=0):
