@@ -54,11 +54,12 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            """run for print my square"""
-            for i in range(self.__position[1]):
-                print()
+            if self.__position[1] > 0:
+                """run for print my square"""
+                for i in range(self.__position[1]):
+                    print()
             num = '#' * self.__size
             none = ' ' * self.__position[0]
-            for i in range(self.__size):
+            for j in range(self.__size):
                 """print my square"""
                 print(none, num, sep="")
