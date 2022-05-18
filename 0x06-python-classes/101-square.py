@@ -1,0 +1,59 @@
+#!/usr/bin/python3
+"""A class Square that defines a square based on 3-squared.py"""
+
+
+class Square:
+    """square class, empty"""
+    def __init__(self, size=0, position=(0, 0)):
+        self.size = size
+        self.position = position
+
+    def area(self):
+        return (self.__size ** 2)
+
+    @property
+    def size(self):
+        return self.__size
+
+    @property
+    def position(self):
+        return self.__position
+
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
+    @position.setter
+    def position(self, value):
+        if (len(value) != 2 or not isinstance(value, tuple)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (value[0] < 0 or value[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (not isinstance(value[0], int) or not isinstance(value[1], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
+    def my_print(self):
+        if self.__size == 0:
+            print("")
+        else:
+            for i in range(self.__position[1]):
+                print("")
+
+    def Square(self):
+        outp = ""
+        if self.__size == 0:
+            pass
+        else:
+            for i in range(self.__position[1]):
+                outp += '\n'
+            num = '#' * self.__size
+            space = ' ' * self.__position[0]
+            outp += num + space
+            for i in range(1, self.__size):
+                outp += '\n' + num + space
+        return outp
