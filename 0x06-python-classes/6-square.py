@@ -1,65 +1,48 @@
 #!/usr/bin/python3
-"""define my class"""
+"""A class Square that defines a square based on 3-squared.py"""
 
 
 class Square:
-    """my instance of size"""
+    """square class, empty"""
     def __init__(self, size=0, position=(0, 0)):
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        if type(position) is not tuple or len(position) != 2 or\
-           type(position[0]) is not int or type(position[1]) is not int\
-           or position[0] < 0 or position[1] < 0:
-            raise TypeError("position mus be a tuple of 2 positive integers")
-            """finally realize my task"""
-        self.__position = position
-        self.__size = size
+        self.size = size
+        self.position = position
 
     def area(self):
-        """define my function in only one line, without self"""
-        return (self.__size * self.__size)
+        return (self.__size ** 2)
 
     @property
     def size(self):
-        """retnr size of the square"""
-        return self._size
+        return self.__size
 
     @property
     def position(self):
-        """return the value of position"""
         return self.__position
-
-    @position.setter
-    def position(self, value):
-        if type(value) is not tuple or len(value) != 2\
-           or type(value[0]) is not int or type(value[1]) is not int\
-           or value[0] < 2 or value[1] < 2:
-            raise TypeError(
-               "position must be a tuple of 2 positive integers")
-        self.__position = value
-        
 
     @size.setter
     def size(self, value):
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @position.setter
+    def position(self, value):
+        if (len(value) != 2 or not isinstance(value, tuple)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (value[0] < 0 or value[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (not isinstance(value[0], int) or not isinstance(value[1], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
     def my_print(self):
-        """the size exist"""
         if self.__size == 0:
-            print()
+            print("")
         else:
             if self.__position[1] > 0:
-                """run for print my square"""
                 for i in range(self.__position[1]):
-                    print()
-            num = '#' * self.__size
-            none = ' ' * self.__position[0]
+                    print("")
             for j in range(self.__size):
-                """print my square"""
-                print(none, num, sep="")
+                print(" " * self.__position[0] + "#" * self.__size)
