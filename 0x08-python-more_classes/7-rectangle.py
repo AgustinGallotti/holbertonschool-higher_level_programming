@@ -58,7 +58,8 @@ class Rectangle:
             return ""
         string = ""
         for i in range(self.height - 1):
-            string += str(self.print_symbol * self.width) + '\n'
+            string += str(self.print_symbol * self.width)
+        string += "\n"
         string += str(self.print_symbol * self.width)
         return string
 
