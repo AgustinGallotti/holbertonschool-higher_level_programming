@@ -1,0 +1,49 @@
+#!/usr/bin/python3
+"""define a class"""
+
+
+class Square:
+    """square class, empty"""
+    def __init__(self, size=0):
+        """define the square"""
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
+
+    def area(self):
+        """define and return the area"""
+        return (self.__size ** 2)
+
+    @property
+    def size(self):
+        return (self.__size)
+
+    @size.setter
+    def size(self, value):
+        if type(value) != int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
+
+    def __lt__(self, compare):
+        return self.area() < compare.area()
+
+    def __le__(self, compare):
+        return self.area() <= compare.area()
+
+    def __eq__(self, compare):
+        return self.area() == compare.area()
+
+    def __ne__(self, compare):
+        return self.area() != compare.area()
+
+    def __gt__(self, compare):
+        return self.area() > compare.area()
+
+    def __ge__(self, compare):
+        return self.area() >= compare.area()
