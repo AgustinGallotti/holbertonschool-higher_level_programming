@@ -6,7 +6,7 @@ class Rectangle:
     """coments to defiend"""
     number_of_instances = 0
     """this couter is for instnaces of del or create"""
-    print_symbol = '#'
+    print_symbol = "#"
     """representation for my strings"""
 
     def __init__(self, width=0, height=0):
