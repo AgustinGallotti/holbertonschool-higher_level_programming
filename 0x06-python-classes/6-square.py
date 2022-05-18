@@ -59,7 +59,7 @@ class Square:
             for i in range(self.__position[1]):
                 print()
             num = '#' * self.__size
-            none = ' ' * self.__position[0]
+            none = '-' * self.__position[0]
             for i in range(self.__size):
                 """print my square"""
                 print(none, num, sep="")
