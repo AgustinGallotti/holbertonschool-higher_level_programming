@@ -5,7 +5,6 @@
 class Rectangle:
     """coments to defiend"""
 
-
     def __init__(self, width=0, height=0):
         """rectangle for initialize"""
         self.width = width
