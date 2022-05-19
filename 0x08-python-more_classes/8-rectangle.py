@@ -75,12 +75,11 @@ class Rectangle:
         """counter [-] for new delete"""
 
     def bigger_or_equal(rect_1, rect_2):
-        if not isinstance(rect_1, Rectangle):
+        """return the greater"""
+        if type(rect_1) is not Rectangle:
             raise TypeError("must be an instance of Rectangle")
-        elif not isinstance(rect_2, Rectangle):
+        if type(rect_2) is not Rectangle:
             raise TypeError("must be an isntance of Rectangle")
-        elif rect_1.area() >= rect_2.area():
+        if rect_1.area() > rect_2.area():
             return rect_2
-        else:
-            return rect_1
-        
+        return rect_1
