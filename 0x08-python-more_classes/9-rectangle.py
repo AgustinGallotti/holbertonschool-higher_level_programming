@@ -86,4 +86,4 @@ class Rectangle:
 
     @classmethod
     def square(csl, size=0):
-            return csl(size, size)
+        return csl(size, size)
