@@ -1,0 +1,41 @@
+Test driven for task 0-add_integer
+----------------------------------
+
+add_integer = __import__('0-add_integer').add_integer
+
+>>>print (add_integer(1, 2))
+>>>3
+>>>print (add_integer(100, -2))
+>>>98
+>>>print (add_integer(2))
+>>>2
+>>>print (add_integer(100.3 -2))
+>>>98
+>>>print (add_integer(None))
+Traceback (must recent call last)
+TypeError: a must be an integer
+-------------------------------
+>>>print (add_integer(None, None))
+Traceback (must recent call last)
+TypeError: a must be an integer
+-------------------------------
+>>>print (add_integer("a", None)
+Traceback (must recent call last)
+TypeError: a must be an integer
+-------------------------------
+>>>print (add_integer(1, [2, 100])
+Traceback (most recent call last)
+TypeError: a must be an integer
+--------------------------------
+>>>print (add_integer(1, None))
+Traceback (most recent call last)
+TypeError: a must be an integer
+-------------------------------
+>>>print (add_integer(1, 2, 3))
+Traceback (most recent call last)
+TypeError: a must be an integer
+-------------------------------
+>>>print (add_integer(1, "a")
+Traceback (most recent call last)
+TypeError: a must be an integer
+-------------------------------
