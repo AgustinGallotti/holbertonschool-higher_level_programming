@@ -1,0 +1,78 @@
+Test driven for task 0-add_integer
+----------------------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+CASES:
+
+-----------------------------
+
+    >>> print(add_integer(0, 0))
+    0
+
+-----------------------------
+
+    >>> print(add_integer(3.14, -3.14))
+    0
+
+-----------------------------
+
+    >>> print(add_integer(10))
+    108
+
+------------------------------
+
+    >>> print(add_integer(2))
+    100
+
+------------------------------
+
+    >>> print(add_integer(0))
+    98
+
+------------------------------
+
+    >>> print(add_integer(2.5, 15))
+    17
+
+------------------------------
+
+    >>> print(add_integer(5, 5))
+    10
+
+------------------------------
+
+    >>> print(add_integer(-98))
+    0
+
+-------------------------------
+
+    >>> print(add_integer(1, [1, 2]))
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+--------------------------------
+
+    >>> print(add_integer(1, None))
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+-------------------------------
+
+    >>> print(add_integer(1, 2, 3, 4))
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 4 were given
+
+-------------------------------
+
+    >>> print(add_integer(1, "a"))
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+-------------------------------
+
+    >>> add_integer("a")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+-------------------------------
