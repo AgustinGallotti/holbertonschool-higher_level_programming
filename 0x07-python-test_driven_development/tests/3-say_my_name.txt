@@ -4,7 +4,7 @@ Test for task 3-say_my_name
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 >>> say_my_name("a")
-My name is a
+My name is a 
 
 >>> say_my_name("a", "b")
 My name is a b
