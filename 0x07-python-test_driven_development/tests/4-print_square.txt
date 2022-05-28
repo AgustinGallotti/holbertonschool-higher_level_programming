@@ -1,39 +1,53 @@
-Test for task 4-print_square
-----------------------------
+Using ''print_square''
 
->>> print_square = __import__('4-print_square').print_square
+------------------------
 
->>> print_square(3)
-###
-###
-###
+Check if size is type int
+Checks if size is less than 0
+Prints a square with "#" depending on size
 
->>> print_square(1)
-#
+Import ''print_square''
 
->>> print_square(0)
+    >>> print_square = __import__('4-print_square').print_square
 
+Testers:
 
->>> print_square()
-Traceback (most recent call last):
-TypeError: print_square() missing 1 required positional argument: 'size'
+Basic usage, test one:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
 
->>> print_square(-5)
-Traceback (most recent call last):
-ValueError: size must be >= 0
+Negative input, test two:
+    >>> print_square(-4)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
 
->>> print_square(3.14)
-Traceback (most recent call last):
-TypeError: size must be an integer
+Non int input, test three:
+    >>> print_square("h")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
 
->>> print_square(-3.14)
-Traceback (most recent call last):
-TypeError: size must be an integer
+No input, test four:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
 
->>> print_square(None)
-Traceback (most recent call last):
-TypeError: size must be an integer
+Zero input, test five:
+    >>> print_square(0)
 
->>> print_square("a")
-Traceback (most recent call last):
-TypeError: size must be an integer
+Float input given, test six:
+    >>> print_square(4.4)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+More than one parameter passed, test seven:
+    >>> print_square(4, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
