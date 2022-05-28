@@ -1,30 +1,27 @@
 #!/usr/bin/python3
-"""module for function to divide a matrix"""
+""" function that divides all elements of a matrix """
 
 
 def matrix_divided(matrix, div):
-    """divided"""
     error = "matrix must be a matrix (list of lists) of integers/floats"
-    if type(matrix) is not list or len(matrix) == 0:
+    if not isinstance(matrix, list):
         raise TypeError(error)
-    if type(div) is not int and type(div) is not float:
+    elif not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    if div == 0:
+    elif div == 0:
         raise ZeroDivisionError("division by zero")
-    if type(matrix[0]) is not list:
-        raise TypeError(error)
 
-    newmatrix = []
-    for row in matrix:
-        if type(row) is not list:
+    new_matrix = []
+    for i in matrix:
+        if not isinstance(i, list):
             raise TypeError(error)
-        if len(row) != len(matrix[0]):
+        if len(i) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
 
-        newrow = []
-        for b in row:
-            if type(b) is not int and type(b) is not float:
+        temporal_list = []
+        for j in i:
+            if not isinstance(j, (int, float)):
                 raise TypeError(error)
-            newrow.append(round(float(b / div), 2))
-        newmatrix.append(newrow)
-    return newmatrix
+            temporal_list.append(round(j/div, 2))
+        new_matrix.append(temporal_list)
+    return new_matrix
