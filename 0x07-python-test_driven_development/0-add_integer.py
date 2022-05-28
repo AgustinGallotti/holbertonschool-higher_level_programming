@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""adds two integers, a with b"""
+""" A function that adds 2 integers """
 
 
 def add_integer(a, b=98):
-    """ Adds to nubmers as integers"""
+    """ check if the parameters are int otherwise return the addition """
     if isinstance(a, float) or isinstance(b, float):
         a = int(a)
         b = int(b)
