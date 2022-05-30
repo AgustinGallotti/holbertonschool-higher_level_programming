@@ -2,16 +2,18 @@ Cases for 0x0A-7 ---> integer validator
 ---------------------------------------
 
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
 >>> a = Basegeometry()
+
 >>> valid = a.integer_validator
 
->>> valid("my_int", 12)
+>>> valid("height", 12)
 
 >>> valid("width", 89)
 
 >>> valid("", 12)
 
->>> a.area()
+>>> valid.area()
 Traceback (most recent call last):
 Exception: area() is not implement
 
@@ -53,10 +55,10 @@ TypeError: name must be an integer
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("x", -1)
+>>> valid("width", -1)
 Traceback (most recent call last):
-ValueError: x must be greater than 0
+ValueError: width must be greater than 0
 
->>> valid("x", 0)
+>>> valid("size", 0)
 Traceback (most recent call last):
-ValueError: x must be greater than 0
+ValueError: size must be greater than 0
