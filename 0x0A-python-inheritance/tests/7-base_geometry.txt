@@ -3,7 +3,7 @@ Cases for 0x0A-7 ---> integer validator
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
->>> bg = Basegeometry()
+>>> bg = BaseGeometry()
 
 >>> bg.integer_validator("my_int", 12)
 
