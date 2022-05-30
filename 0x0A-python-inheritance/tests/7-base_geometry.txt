@@ -3,78 +3,76 @@ Cases for 0x0A-7 ---> integer validator
 
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
->>> a = Basegeometry()
+>>> bg = Basegeometry()
 
->>> valid = a.integer_validator
+>>> bg.integer_validator("height", 12)
 
->>> valid("height", 12)
+>>> bg.integer_valdiator("width", 89)
 
->>> valid("width", 89)
-
->>> valid("", 12)
+>>> bg.integer_valdiator("", 12)
 
 >>> valid.area()
 Traceback (most recent call last):
 Exception: area() is not implement
 
->>> valid()
+>>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
->>> valid()
+>>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
->>> valid("", 3)
+>>> bg.integer_valdiator("", 3)
 
->>> valid ("name", "string")
+>>> bg.integer_validator("name", "string")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("name", {1, 2})
+>>> bg.integer_validator("name", {1, 2})
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("name, None")
+>>> bg.integer_valdiator("name, None")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("name", True)
+>>> bg.integer_validator("name", True)
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("name", False)
+>>> bg.integer_validator("name", False)
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("name", 1.0)
+>>> bg.integer_validator("name", 1.0)
 Traceback (most recent call last):
 TypeError: name must an integer
 
->>> valid("name", [])
+>>> bg.integer_validator("name", [])
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("name", ())
+>>> bg.integer_validator("name", ())
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> valid("width", -1)
+>>> bg.integer_validator("width", -1)
 Traceback (most recent call last):
 ValueError: width must be greater than 0
 
->>> valid("size", 0)
+>>> bg.integer_validator("size", 0)
 Traceback (most recent call last):
 ValueError: size must be greater than 0
 
->>> valid("height", False)
+>>> bg.integer_validator("height", False)
 Traceback (most recent call last):
 TypeError: height must be an integer
 
->>> valid("size", 2.3)
+>>> bg.integer_validator("size", 2.3)
 Traceback (most recent call last):
 TypeError: size must be an integer
 
->>> valid("width", [2])
+>>> bg.integer_validator("width", [2])
 Traceback (most recent call last):
 TypeError: width must be an integer
