@@ -26,15 +26,3 @@ Cases for 1-my_list
 [-5, 0, 1, 2, 3, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 3, 5, -5, 0]
-
->>> my_list.print_sorted()
-[1, 4, 7]
-
->>> my_list
-[5, 3, 2]
-
->>> my_list
-['a', 'b', 'c', 'd', 'e']
-
->>>my_list.print_sorted()
-['a', 'b', 'c', 'd', 'e']
