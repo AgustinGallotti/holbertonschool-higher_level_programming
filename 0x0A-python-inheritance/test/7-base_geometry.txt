@@ -1,0 +1,58 @@
+Cases for 0x0A-7 ---> integer validator
+---------------------------------------
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> a = Basegeometry()
+>>> valid = a.integer_validator
+
+>>> valid("my_int", 12)
+
+>>> valid("width", 89)
+
+>>> valid("", 12)
+
+>>> a.area()
+Traceback (most recent call last):
+Exception: area() is not implement
+
+>>> valid()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required ppositional argument: 'value'
+
+>>> valid("", 3)
+
+>>> valid ("name", "string")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> valid("name", {1, 2})
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> valid("name, None")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> valid("name", True)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> valid("name", 1.0)
+Traceback (most recent call last):
+TypeError: name must an integer
+
+>>> valid("name", [])
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> valid("name", ())
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> valid("x", -1)
+Traceback (most recent call last):
+ValueError: x must be greater than 0
+
+>>> valid("x", 0)
+Traceback (most recent call last):
+ValueError: x must be greater than 0
