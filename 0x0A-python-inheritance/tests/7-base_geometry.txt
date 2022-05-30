@@ -37,6 +37,10 @@ TypeError: name must be an integer
 Traceback (most recent call last):
 TypeError: name must be an integer
 
+>>> valid("name", False)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
 >>> valid("name", 1.0)
 Traceback (most recent call last):
 TypeError: name must an integer
@@ -56,7 +60,3 @@ ValueError: x must be greater than 0
 >>> valid("x", 0)
 Traceback (most recent call last):
 ValueError: x must be greater than 0
-
->>>valid("x", 2.4)
-Traceback (most recent call last):
-ValueError: x must be an integer
