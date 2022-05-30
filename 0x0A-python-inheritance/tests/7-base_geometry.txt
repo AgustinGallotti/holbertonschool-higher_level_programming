@@ -19,7 +19,11 @@ Exception: area() is not implement
 
 >>> valid()
 Traceback (most recent call last):
-TypeError: integer_validator() missing 1 required ppositional argument: 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> valid()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 >>> valid("", 3)
 
@@ -62,3 +66,15 @@ ValueError: width must be greater than 0
 >>> valid("size", 0)
 Traceback (most recent call last):
 ValueError: size must be greater than 0
+
+>>> valid("height", False)
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> valid("size", 2.3)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> valid("width", [2])
+Traceback (most recent call last):
+TypeError: width must be an integer
