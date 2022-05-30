@@ -4,7 +4,6 @@
 
 class BaseGeometry:
     """baseclass for geometry objects"""
-
     def area(self):
         """return area of geometry objects"""
         raise Exception("area() is not implemented")
