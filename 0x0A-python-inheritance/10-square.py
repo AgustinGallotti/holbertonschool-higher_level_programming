@@ -17,5 +17,5 @@ class Square(Rectangle):
         return self.__size ** 2
 
     def __str__(self):
-        """print, super ignore my def str in rect"""
+        """print, super"""
         return super().__str__()
