@@ -15,4 +15,8 @@ class Student():
         if type(attrs) is str:
             return {key: value for key, value in self__dict__.items() if key in attrs}
         else:
-            return self.first_name, self.last_name, self.age
+            return self.__dict__
+
+    def reload_from_json(self, json):
+        """reload"""
+
