@@ -3,6 +3,7 @@
 
 
 def add_attribute(obj, name, value):
+    """defined my obj"""
     if type(name) is not str:
         raise TypeError("can't add new attribute")
     try:
