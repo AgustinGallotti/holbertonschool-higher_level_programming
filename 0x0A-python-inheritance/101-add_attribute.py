@@ -7,5 +7,5 @@ def add_attribute(obj, name, value):
         raise TypeError("can't add new attribute")
     try:
         exec("obj.{} = value".format(name))
-    except:
-        raise TypeError("can't add new attribute")
+    except
+    raise TypeError("can't add new attribute")
