@@ -85,6 +85,7 @@ variable value not a integer
     TypeError: name must be an integer
 
 within name
-    >>> bg.integer_validator("name", ())
+    >>> bg.integer_validator("name", True)
     Traceback (most recent call last):
+    ...
     TypeError: name must be an integer
