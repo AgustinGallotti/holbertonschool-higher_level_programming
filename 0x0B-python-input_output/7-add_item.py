@@ -10,5 +10,7 @@ try:
 except FileNotFoundError:
     listt = []
 for arg in sys.argv[1:]:
+    """values that are passed during calling of program
+    along with thecalling statement"""
     listt.append(arg)
 savejson(listt, "add_item.json")
