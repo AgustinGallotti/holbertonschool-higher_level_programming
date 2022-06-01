@@ -2,7 +2,7 @@
 """define a class for student"""
 
 
-def Student:
+class Student:
     """define my class"""
     def __init__(self, first_name, last_name, age):
     self.first_name = first_name
