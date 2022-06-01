@@ -14,6 +14,6 @@ class Student:
         """return info"""
         if attrs is not None:
             return {key: value for key,
-                    value in self__dict__.items() if key in attrs}
+                    value in self.__dict__.items() if key in attrs}
         else:
             return self.__dict__
