@@ -14,4 +14,4 @@ try:
 except FileNotFoundError:
     listt = []
 
-save_to_json_file(listt, add_item, filename)
+save_to_json_file(listt + filename)
