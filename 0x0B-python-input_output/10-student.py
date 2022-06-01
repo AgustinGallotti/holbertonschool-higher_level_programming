@@ -11,7 +11,7 @@ class Student():
 
     def to_json(self, attrs=None):
         """return info"""
-        if type(attrs) is not None:
+        if attrs is not None:
             return {key: value for key,
                     value in self__dict__.items() if key in attrs}
         else:
