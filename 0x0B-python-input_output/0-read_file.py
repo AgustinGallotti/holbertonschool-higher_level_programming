@@ -3,5 +3,6 @@
 
 
 def read_file(filename=""):
-    with open(filename, "r") as f:
+    """defined my built"""
+    with open(filename, "r", encoding="UTF-8") as f:
         print(f.read(), end="")
