@@ -14,9 +14,4 @@ try:
 except FileNotFoundError:
     listt = []
 
-for arg in sys.argv[1:]:
-    """values that are passed during calling of program
-    along with thecalling statement"""
-    listt.append(filename)
-
-save_to_json_file(listt, add_item)
+save_to_json_file(listt, add_item, filename)
