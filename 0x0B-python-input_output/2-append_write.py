@@ -3,5 +3,6 @@
 
 
 def append_write(filename="", text=""):
-    with open(filename, mode="a", encoding="utf=8") as f:
+    """built for append"""
+    with open(filename, mode="a", encoding="UTF-8") as f:
         return f.write(text)
