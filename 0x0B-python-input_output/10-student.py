@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-class Student():
+class Student:
     """class"""
     def __init__(self, first_name, last_name, age):
         """define my id"""
