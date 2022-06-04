@@ -18,10 +18,10 @@ class Square(Rectangle):
     def size(self):
         return self.width
 
-   @size.setter
-   def size(self, size):
-       self.width = size
-       self.height = size
+    @size.setter
+    def size(self, size):
+        self.width = size
+        self.height = size
 
     def update(self, *args, **kwargs):
         """positional order"""
