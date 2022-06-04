@@ -7,12 +7,12 @@ class Square(Rectangle):
     """define my square"""
     def __init__(self, size, x=0, y=0, id=None):
         """intialize"""
-        super().__intit__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """print"""
         return "[Square] ({}) {}/{} - {}".\
-            format(self.id, slef.x, slef.y, self.width)
+            format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
@@ -25,6 +25,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """positional order"""
+        n_args = len(args)
         if n_args > 0:
             self.id = args[0]
         if n_args > 1:
@@ -40,7 +41,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """return an dicitonary"""
-        n_dict = {"id": self.id, "size": slef.width,
-                  "x": slef.x, "y": self.y}
+        n_dict = {"id": self.id, "size": self.width,
+                  "x": self.x, "y": self.y}
         return n_dict
 
