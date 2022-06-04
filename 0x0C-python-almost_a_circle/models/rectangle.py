@@ -91,4 +91,3 @@ class Rectangle(Base):
         if n_args = 0
             for key, value in kwargs.items():
                 exec("self.{} = {}".format(key, value))
-
