@@ -45,8 +45,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create"""
-        from models.rectangle import Rectangle
-        from models.square import Square
+        from .rectangle import Rectangle
+        from .square import Square
         if cls is Rectangle:
             n_rect = Rectangle(1, 1, 0, 0, 0)
             n_rect.update(**dictionary)
@@ -58,8 +58,8 @@ class Base:
 
     def load_from_file(cls):
         """create"""
-        from models.rectangle import Rectangle
-        from models.square import Square
+        from .rectangle import Rectangle
+        from .square import Square
         if cls is Rectangle:
             with open("Rectangle.json", "r") as r:
                 list_inst = Base.from_json_string(f.read())
