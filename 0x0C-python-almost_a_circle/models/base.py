@@ -44,6 +44,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """create"""
         from models.rectangle import Rectangle
         from models.square import Square
         if cls is Rectangle:
@@ -56,6 +57,7 @@ class Base:
             return n_sqr
 
     def load_from_file(cls):
+        """create"""
         from models.rectangle import Rectangle
         from models.square import Square
         if cls is Rectangle:

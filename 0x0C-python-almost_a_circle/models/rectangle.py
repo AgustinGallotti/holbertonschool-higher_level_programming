@@ -15,20 +15,24 @@ class Rectangle(Base):
         super().__init__(id)
 
     def __str__(self):
+        """string"""
         return "[Rectangle] ({}) {}/{} - {}/{}".\
             format(self.id, self.x, self.y, self.width, self.height)
  
 
     @property
     def width(self):
+        """width"""
         return self.__width
 
     @property
     def height(self):
+        """height"""
         return self.__height
 
     @width.setter
     def width(self, width):
+        """define width"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -37,6 +41,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        """define height"""
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height < 1:
@@ -45,10 +50,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x"""
         return self.__x
 
     @x.setter
     def x(self, x):
+        """def x"""
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -57,10 +64,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y"""
         return self.__y
 
     @y.setter
     def y(self, y):
+        """def my y"""
         if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -73,6 +82,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """display"""
         for y in range(self.y):
             print()
         for h in range(self.height):
