@@ -63,23 +63,10 @@ class Base:
         return dummy
 
     def load_from_file(cls):
-        """create"""
-        from .rectangle import Rectangle
-        from .square import Square
-        if cls is Rectangle:
-            with open("Rectangle.json", "r") as r:
-                list_inst = Base.from_json_string(f.read())
-            if list_inst == "":
+        """return a list of instances"""
+        filename = cls.__name__ + ".json":
+            if exist(filename):
+                return [cls.create(**obj) for obj
+                        in cls.from_json_string(f.read())]
+            else:
                 return []
-            for index in range(len(list_instance)):
-                list_inst[index] = Rectangle.create(**list_inst[index])
-
-            return list_inst
-        elif cls is Square:
-            with open("Square.json", "r") as f:
-                list_inst = Base.from_json_string(f.read())
-            if list_inst == "":
-                return []
-            for index in range(len(list_inst)):
-                list_inst[index] = Square.create(**list_insta[index])
-            return list_insta
