@@ -44,8 +44,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """create"""
-        from .rectangle import Rectangle
+        """funciton explained"""
+        """---from .rectangle import Rectangle
         from .square import Square
         if cls is Rectangle:
             n_rect = Rectangle(1, 1, 0, 0, 0)
@@ -54,7 +54,13 @@ class Base:
         elif cls is Square:
             n_sqr = Square(1, 0, 0, 0)
             n_sqr.update(**dcitionary)
-            return n_sqr
+            return n_sqr---"""
+        if cls.__name__ == "Rectangle"
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square"
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
 
     def load_from_file(cls):
         """create"""
