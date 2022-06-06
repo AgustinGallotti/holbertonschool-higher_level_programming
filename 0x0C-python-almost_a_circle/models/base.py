@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """define my first class, the folder beocme a package"""
+import json
 
 
 class Base:
@@ -18,19 +19,19 @@ class Base:
     def to_json_string(list_dictionaries):
         """return json string made out of list_dictionaries"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return []
-        return json.loads(json_string)
+            return "[]"
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """write json string representation"""
-        filen = cls.__name__ + ".json"
+        filename = cls.__name__ + ".json"
         if list_objs is None:
-            string  = "[]"
+            string = "[]"
         else:
-            string = cls.to_json_string([obj.to_dictionary()\
-                for obj in list_obj])
-        with open(filen, "w") as f:
+            string = cls.to_json_string(
+                [obj.to_dictionary() for obj in list_objs])
+        with open(filename, "w") as f:
             f.write(string)
 
     @staticmethod
@@ -43,9 +44,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """create a geometry object form dicionary"""
-        from .rectangle import Rectangle
-        from .square import Square
+        from models.rectangle import Rectangle
+        from models.square import Square
         if cls is Rectangle:
             n_rect = Rectangle(1, 1, 0, 0, 0)
             n_rect.update(**dictionary)
@@ -54,3 +54,24 @@ class Base:
             n_sqr = Square(1, 0, 0, 0)
             n_sqr.update(**dcitionary)
             return n_sqr
+
+    def load_from_file(cls):
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
+            with open("Rectangle.json", "r") as r:
+                list_inst = Base.from_json_string(f.read())
+            if list_inst == "":
+                return []
+            for index in range(len(list_instance)):
+                list_inst[index] = Rectangle.create(**list_inst[index])
+
+            return list_inst
+        elif cls is Square:
+            with open("Square.json", "r") as f:
+                list_inst = Base.from_json_string(f.read())
+            if list_inst == "":
+                return []
+            for index in range(len(list_inst)):
+                list_inst[index] = Square.create(**list_insta[index])
+            return list_insta
