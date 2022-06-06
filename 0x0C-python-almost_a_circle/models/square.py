@@ -16,10 +16,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """size"""
         return self.width
 
     @size.setter
     def size(self, size):
+        """size replace"""
         self.width = size
         self.height = size
 
@@ -44,4 +46,3 @@ class Square(Rectangle):
         n_dict = {"id": self.id, "size": self.width,
                   "x": self.x, "y": self.y}
         return n_dict
-
