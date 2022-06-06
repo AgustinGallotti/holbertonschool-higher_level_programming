@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """define my first class, the folder beocme a package"""
 import json
+import csv
 
 
 class Base:
@@ -72,3 +73,40 @@ class Base:
                         in cls.from_json_string(f.read())]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """function ot save file"""
+        if list_objs:
+            filename = cls.__name__ + ".csv"
+            with open(filename, "w") as f:
+                if "Rectangle" in filename:
+                    fields = ["id", "width", "height", "x", "y"]
+                elif "Square" in filename:
+                    fields = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(f, fieldnames=fields)
+                writer.writeheader()
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """define load"""
+        filename = cls.__name__ + ".csv"
+        if (filename):
+            if "Rectangle" in filename:
+                fields = ["id", "width", "height", "x", "y"]
+            elif "Square" in filename:
+                fields = ["id", "size", "x", "y"]
+            list_objs = []
+            with open(filename, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if len(fields) == 4:
+                        n_inst = cls(1)
+                    elif len(fields) == 5:
+                        n_inst = cls(1, 1)
+                    for a, field in enumerate(row):
+                        setattr(n_inst, fields[a], int(row[field]))
+                    list_objs.append(n_inst)
+            return list_objs
