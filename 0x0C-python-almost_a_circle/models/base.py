@@ -55,9 +55,9 @@ class Base:
             n_sqr = Square(1, 0, 0, 0)
             n_sqr.update(**dcitionary)
             return n_sqr---"""
-        if cls.__name__ == "Rectangle"
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
-        elif cls.__name__ == "Square"
+        elif cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
