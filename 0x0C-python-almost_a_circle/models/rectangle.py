@@ -18,7 +18,6 @@ class Rectangle(Base):
         """string"""
         return "[Rectangle] ({}) {}/{} - {}/{}".\
             format(self.id, self.x, self.y, self.width, self.height)
- 
 
     @property
     def width(self):
@@ -76,7 +75,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = y
 
-
     def area(self):
         """return the area of the rectangle"""
         return self.width * self.height
@@ -111,4 +109,3 @@ class Rectangle(Base):
         n_dict = {"id": self.id, "width": self.width, "height": self.height,
                   "x": self.x, "y": self.y}
         return n_dict
-
