@@ -110,3 +110,27 @@ class Base:
                         setattr(n_inst, fields[a], int(row[field]))
                     list_objs.append(n_inst)
             return list_objs
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """drawings"""
+        from turtle import Turtle, Screen
+        from time import sleep
+
+        screen = Screen()
+        tor.fillcolor("white")
+        tor.begin_fill()
+        for side in range(4):
+            tor.forward(100)
+            tor.left(90)
+        tor.end_fill()
+    tor.penup()
+    tor.goto(-350, 0)
+    tor.pendown()
+
+    while True :
+        tor.clear()
+        draw()
+
+        screen.update()
+        tor.forward(0.2)
