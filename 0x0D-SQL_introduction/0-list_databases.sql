@@ -1,5 +1,2 @@
 -- sql
-SELECT
-  user
-FROM
-  mysql.user;
+SHOW DATABASES;
