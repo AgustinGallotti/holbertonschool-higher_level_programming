@@ -1,11 +1,11 @@
 -- sql
 SELECT
-  'id', 'name'
+  id, name
 FROM
-  'cities'
+  cities
 WHERE
-  'state_id' IN (SELECT 'id'
+  state_id IN (SELECT id
     FROM
-      'cities'
+      cities
     WHERE
-      'name' = "California") ORDER BY cities.id DESC;
+      name = 'California') ORDER BY cities.id;
