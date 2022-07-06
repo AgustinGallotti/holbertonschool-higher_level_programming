@@ -2,8 +2,8 @@
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities (
   id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  states_id INT NOT NULL,
+  state_id INT NOT NULL,
   name VARCHAR(256) NOT NULL,
   UNIQUE(id),
-  FOREIGN KEY (id) REFERENCES states_id(id)
+  FOREIGN KEY (state_id) REFERENCES states(id)
 );
