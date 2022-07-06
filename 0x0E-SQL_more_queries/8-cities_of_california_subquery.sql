@@ -8,4 +8,4 @@ WHERE
     FROM
       cities
     WHERE
-      name = 'California') ORDER BY cities.id;
+      name = 'California') ORDER BY id;
