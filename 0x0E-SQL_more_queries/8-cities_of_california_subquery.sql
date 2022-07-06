@@ -1,10 +1,10 @@
 -- sql
 SELECT
-  cities
+  id, name
 FROM
   hbtn_0d_usa.states
 WHERE
-  name IN (SELECT name
+  name IN (SELECT id
     FROM
       cities
     WHERE
