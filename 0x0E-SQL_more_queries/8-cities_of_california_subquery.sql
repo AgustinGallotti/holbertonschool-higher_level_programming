@@ -2,10 +2,10 @@
 SELECT
   id, name
 FROM
-  hbtn_0d_usa.states
+  cities
 WHERE
-  name IN (SELECT id
+  'state_id' IN (SELECT id
     FROM
       cities
     WHERE
-      name = 'California');
+      name = 'California') ORDER BY cities.id DESC;
