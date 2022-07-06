@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS unique_id (
   name VARCHAR(256),
 );
 ALTER TABLE unique_id ALTER id SET DEFAULT 1;
-SELECT UUID() AS id;
+UPDATE unique_id SET id=UUID();
