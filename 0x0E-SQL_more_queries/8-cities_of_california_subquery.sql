@@ -6,6 +6,6 @@ FROM
 WHERE
   state_id IN(SELECT id
     FROM
-      state
+      state.cities
     WHERE
-      name = 'California' ORDER BY id);
+      name = 'California' ORDER BY cities.id);
