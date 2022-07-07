@@ -1,2 +1,2 @@
 -- sql
-SELECT states, cities FROM states ORDER BY states, cities;
+SELECT id, name FROM cities, states INNER JOIN city;
