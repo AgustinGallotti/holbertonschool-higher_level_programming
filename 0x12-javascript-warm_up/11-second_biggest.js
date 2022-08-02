@@ -6,4 +6,3 @@ if (myVar.length <= 3) {
 } else {
   console.log(myVar.sort(function (a, b) { return a - b; })[myVar.length - 2]);
 }
-
