@@ -1,11 +1,6 @@
 #!/usr/bin/node
 
-const p = process.argv;
-const one = 'C is fun\n';
-const two = 'Python is cool\n';
-const three = 'JavaScript is amazing';
-
-while (one && two && three) {
-  console.log(one + two + three);
-  break;
+const p = ['C is fun\n', 'Python is cool\n', 'JavaScript is amazing';
+for (let i = 0; i < p.length; i++) {
+  console.log(p[i]);
 }
