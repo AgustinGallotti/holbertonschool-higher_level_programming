@@ -8,4 +8,3 @@ if(myVar[2] && myVar[3]) {
 } else {
   console.log('NaN');
 }
-
