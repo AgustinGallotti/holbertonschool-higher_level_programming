@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     c = db.cursor()
     c.execute("SELECT id, name FROM states "
-          "WHERE SUBSTR(name, 1, 1)='N' "
+          "WHERE name LIKE 'N%' "
           "ORDER BY id")
     rows = c.fetchall()
     for row in rows:
