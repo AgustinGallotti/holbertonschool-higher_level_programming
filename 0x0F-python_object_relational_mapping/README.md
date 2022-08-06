@@ -1,1 +1,1 @@
-reamde to edit
+areamde to edit
