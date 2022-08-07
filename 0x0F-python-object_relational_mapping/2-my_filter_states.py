@@ -16,6 +16,6 @@ if __name__ == "__main__":
               "WHERE name='" + argv[4] + "' ORDER BY id")
     rows = c.fetchall()
     for row in rows:
-        print(row)
+        print("({}, '{}')".format(row[0], row[1]))
     c.close()
     db.close()
