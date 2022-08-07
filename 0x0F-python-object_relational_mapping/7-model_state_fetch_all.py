@@ -18,4 +18,4 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=db)
     sn = Session()
     for row in sn.query(State).all():
-        print("{}: '{}'".format(row.id, row.name))
+        print("{}: {}".format(row.id, row.name))
