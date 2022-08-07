@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     c = db.cursor()
     c.execute("SELECT id, name FROM states "
-              "WHERE name='" + argv[4] + "' ORDER BY id")
+              "WHERE name=%s ORDER BY id", (argv[4],))
     rows = c.fetchall()
     for row in rows:
         print("({}, '{}')".format(row[0], row[1]))
