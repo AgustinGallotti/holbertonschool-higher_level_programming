@@ -20,3 +20,5 @@ if __name__ == '__main__':
     row = sn.query(State).first()
     if row:
         print("{}: {}".format(row.id, row.name))
+    else:
+        print('Nothing')

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
     module
-"""
+"WHERE name LIKE BINARY 'N%' """
 
 
 if __name__ == "__main__":
