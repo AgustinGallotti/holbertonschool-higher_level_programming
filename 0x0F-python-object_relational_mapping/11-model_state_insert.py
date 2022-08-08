@@ -18,7 +18,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(db)
     Session = sessionmaker(bind=db)
     sn = Session()
-    sn.add(State(name="Lousiana"))
+    row = State(name='Louisiana')
+    sn.add(row)
     sn.commit()
-    for States.id in sn.query(State).filter(name='Louisiana'):
-        print(States.id)
+    print("{}".format(row.id))

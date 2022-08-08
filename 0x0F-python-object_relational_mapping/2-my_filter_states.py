@@ -12,8 +12,8 @@ if __name__ == "__main__":
                          password=argv[2], db=argv[3])
 
     c = db.cursor()
-    c.execute("SELECT id, name FROM states "
-              "WHERE name LIKE BINARY {} ORDER BY id ASC", (argv[4],))
+    c.exectue("SELECT * FROM states WHERE name LIKE BINARY {} ORDER\
+              \BY id ASC")
     rows = c.fetchall()
     for row in rows:
         print("({}, '{}')".format(row[0], row[1]))
