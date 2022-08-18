@@ -1,0 +1,11 @@
+HTTP/1.0 302 FOUND
+Content-Type: text/html; charset=utf-8
+Content-Length: 223
+Location: http://0.0.0.0:5000/route_2
+Server: Werkzeug/0.16.1 Python/3.4.3
+Date: Thu, 18 Aug 2022 22:19:15 GMT
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>Redirecting...</title>
+<h1>Redirecting...</h1>
+<p>You should be redirected automatically to target URL: <a href="/route_2">/route_2</a>.  If not click the link.
