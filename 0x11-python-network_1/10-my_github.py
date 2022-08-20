@@ -7,12 +7,13 @@
 if __name__ == "__main__":
     import requests
     from sys import argv
-    user = argv[1]
-    passw = argv[2]
-    api = 'https://api.github.com/user'
-    r = requests.get(api, auth=(user, passw))
-    access = r.json()
-    try:
-        print(access['id'])
-    except Exception:
-        print("None")
+    repo = argv[1]
+    owner = argv[2]
+    api = 'https://api.github.com/repos/{}/{}/commits'.format(repo, owner)
+    r = requests.get(api)
+    listt = r.json()
+    if r.status_code == 200:
+        for i in listt[:10]:
+            sha = i.get('sha')
+            author = i.get("commit").get("owner").get("name")
+            print("{}: {}".format(sha, author))
