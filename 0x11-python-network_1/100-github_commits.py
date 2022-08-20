@@ -11,11 +11,11 @@ if __name__ == "__main__":
     owner = argv[2]
     api = 'https://api.github.com/repos/{}/{}/commits'.format(repo, owner)
     r = requests.get(api)
-    commits = r.json()
+    listt = r.json()
     try:
-        for i in range(10):
+        for check in range(10):
             print("{}: {}".format(
-                commits[i].get("sha"),
-                commits[i].get("commit").get("author").get("name")))
+                listt[check].get("sha"),
+                listt[check].get("commit").get("author").get("name")))
     except IndexError:
         pass
