@@ -3,14 +3,16 @@
     module
 """
 
+
 if __name__ == "__main__":
     import requests
     from sys import argv
     user = argv[1]
     passw = argv[2]
-    response = requests.get('https://api.github.com/user', auth=(user, passw))
-    data = response.json()
+    api = 'https://api.github.com/user'
+    r = requests.get(api, auth=(user, passw))
+    access = r.json()
     try:
-        print(data['id'])
+        print(access['id'])
     except Exception:
         print("None")
